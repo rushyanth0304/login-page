@@ -35,20 +35,24 @@ h1{
     text-align: center;
     margin-top: 30px;
 }
-.user {
+.user, .email {
     display: flex;
     flex-direction: column;
     padding: 40px 50px 0px 50px;
+    position: relative;
 }
-.user label {
+label {
     margin-bottom: 14px;
 }
-.user input {
+input {
     border: 0px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
 ::placeholder{
-    font-size: 12px;
+    font-size: 13px;
     padding-left: 30px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    letter-spacing: normal;
 }
