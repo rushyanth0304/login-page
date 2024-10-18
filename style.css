@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
  }
  
  .outer{
@@ -34,4 +35,20 @@ h1{
     text-align: center;
     margin-top: 30px;
 }
-
+.user {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px 0px 50px;
+}
+.user label {
+    margin-bottom: 14px;
+}
+.user input {
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+::placeholder{
+    font-size: 12px;
+    padding-left: 30px;
+}
