@@ -33,32 +33,13 @@
 
 }
 @media (max-width:991px){
-    .top-header .row .left-header .left-content {
-        justify-content: center;
+    .login {
+        height: 512px;
+        width: 295px;
     }
-    .top-header .row {
-        flex-direction: column;
-        align-items: center;
+    h1 {
+        font-size: 26px;
     }
-    .top-header .left-header {
-        justify-content: center;
-        display: flex;
-        max-width: 100% !important;
-    }
-    .top-header .right-header {
-        justify-content: center;
-        display: flex;
-        max-width: 100% !important;
-    }
-    .menu {
-        column-gap: 17px !important;
-        margin: 0px auto !important;
-        justify-content: center !important;
-    }
-    .menu li a {
-        font-size: 12px;
-    }
-
 }
 
 @media (max-width:767px){
