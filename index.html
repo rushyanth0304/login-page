@@ -12,20 +12,51 @@
    <div class="outer">
    <div class="login">
       <h1>Login</h1>
-      <div class="user">
-         <label for="">Username</label>
-         <input type="text" placeholder="Type your username">
-      </div>
-      <div class="email">
-         <label for="">Password</label>
-         <input type="text" placeholder="Type your password">
+      <form id="loginForm" onsubmit="return validateForm()">
+         <label for="email">Username</label>
+         <input type="text" id="email" name="email" placeholder="Type your username">
+         <br>
+         <label for="password">Password</label>
+         <input type="password" id="password"  placeholder="Type your password">
          <label class="forgot">Forgot Password</label>
-      </div>
-      <div class="bttn">
-         <input type="button" value="LOGIN">
-      </div>
+   </form>
+      <span id="error-message" style="color: red;"></span>
+      <input class="bttn" type="submit" onclick="validateForm();" value="LOGIN">
+      
    </div>
   
 </div>
+<script>
+   function validateForm() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const errorMessage = document.getElementById("error-message");
+
+    // Email validation regex pattern
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    // Password validation requirements: at least 8 characters, including one uppercase, one number, and one special character
+    const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+    // Clear previous error messages
+    errorMessage.textContent = "";
+
+    // Email validation
+    if (!emailPattern.test(email)) {
+        errorMessage.textContent = "Please enter a valid email.";
+        return false;
+    }
+
+    // Password validation
+    if (!passwordPattern.test(password)) {
+        errorMessage.textContent = "Password must be at least 8 characters long, with one uppercase letter, one number, and one special character.";
+        return false;
+    }
+
+    // If everything is valid
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
 </body>
 </html>
