@@ -40,6 +40,10 @@
     h1 {
         font-size: 26px;
     }
+    .signoff {
+        
+        margin-top: 26px;
+    }
 }
 
 @media (max-width:767px){
